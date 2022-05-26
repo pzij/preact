@@ -337,6 +337,7 @@ function triggerComponentRender(component) {
 	if (!component._dirty) {
 		component._dirty = true;
 		renderQueue.add(component);
+		// console.log('triggerComponentRender', component, renderQueue);
 	}
 }
 
