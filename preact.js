@@ -254,7 +254,7 @@ function createComponentFromVNode(vnode) {
 	let component = componentRecycler.create(vnode.nodeName);
 
 	let props = getNodeProps(vnode);
-	component.setProps(props, NO_RENDER);
+	component.setProps && component.setProps(props, NO_RENDER);
 	component._render(DOM_RENDER);
 
 	let node = component.base;
